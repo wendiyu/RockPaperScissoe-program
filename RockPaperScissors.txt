@@ -1,0 +1,45 @@
+#
+#Created by: Wendi Yu
+#Created on: Feb-20-2019
+#
+#This program is the rock, paper, scissors game
+
+from random import randint
+
+ #randomly generate computerChoice number between 1 and 3
+computerChoice = randint( 1, 3)
+
+#Constant
+ROCK = 1
+PAPER = 2
+SCISSORS = 3
+
+#user input the number
+userChoice = int(input("Rock, paper, scissors!Enter these following number for specific; 1 (Rock)  2 (Paper) 3 (Scissors): "))
+
+if(userChoice == 1 and computerChoice == 2):
+  print("You chose rock. The computer chose paper. You lose!")
+
+elif(userChoice == 1 and computerChoice == 3):
+	print("You chose rock. The computer chose scissors. You win!")
+		
+elif(userChoice == 2 and computerChoice == 3):
+	print("You chose paper. The computer chose scissors. You lose!")
+
+elif(userChoice == 2 and computerChoice == 1): 
+	print("You chose paper. The computer chose rock. You win!")
+
+elif(userChoice == 3 and computerChoice == 1): 
+	print("You chose scissors. The computer chose rock. You lose!")
+
+elif(userChoice == 3 and computerChoice == 2): 
+	print("You chose scissors. The computer chose paper. You win!")	
+		
+elif(userChoice == computerChoice):
+	print("You both chose the same move. It's a tie!")
+
+#user cannot input number bigger than 3 or smaller than 1
+else:
+  print("Invalid input! You only can put 1, 2, 3 to represent Rock, Paper or Scissors.")
+
+input()
